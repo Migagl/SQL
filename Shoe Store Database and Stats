@@ -1,0 +1,25 @@
+--Create a shoe store database
+
+CREATE TABLE shoes (id INTEGER PRIMARY KEY, style INTEGER, brand text, aisle INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO shoes VALUES (1, "Athletic", "Nike", 2, 100, "Black"); 
+INSERT INTO shoes VALUES (2, "Hiking", "Altra", 3, 160, "Green"); 
+INSERT INTO shoes VALUES (3, "Lifting", "Nike", 5, 130, "Green"); 
+INSERT INTO shoes VALUES (4, "Hiking", "Teva", 3, 150, "Blue"); 
+INSERT INTO shoes VALUES (5, "Athletic", "Northface", 2, 180, "Gray"); 
+INSERT INTO shoes VALUES (6, "Running", "New balance", 4, 160, "Black"); 
+INSERT INTO shoes VALUES (7, "Casual", "Nike", 6, 90, "Tan"); 
+INSERT INTO shoes VALUES (8, "Athletic", "Adidas", 2, 80, "Blue");
+INSERT INTO shoes VALUES (9, "Lifting", "Nike", 5, 125, "Maroon");
+INSERT INTO shoes VALUES (10, "Running", "Brooks", 4, 170, "Gray");
+INSERT INTO shoes VALUES (11, "Hiking", "Keen", 3, 170, "Brown");
+INSERT INTO shoes VALUES (12, "Running", "Adidas", 4, 120, "Green");
+INSERT INTO shoes VALUES (13, "Casual", "Nike", 6, 110, "White");
+INSERT INTO shoes VALUES (14, "Hiking", "Merrell", 3, 140, "Gray");
+INSERT INTO shoes VALUES (15, "Running", "Nike", 5, 180, "Black");
+
+--Display the database ordered by price.
+SELECT * FROM shoes ORDER BY price;
+
+--What is the total for all of the items sold?
+SELECT SUM(PRICE) FROM shoes;
