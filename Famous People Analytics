@@ -1,0 +1,30 @@
+CREATE TABLE Actors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    nationality TEXT);
+    
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Dwayne Johnson", 51, "US");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Denzel Washington", 69, "US");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Keanu Reeves", 59, "Canada");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Tom Hanks", 67, "US");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Mark Wahlberg", 52, "US");
+
+CREATE table Movies  (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    actors_id INTEGER,
+    movie TEXT,
+    year TEXT);
+    
+INSERT INTO Movies (actors_id, movie,year) VALUES (1, "Moana", "2016");
+INSERT INTO Movies (actors_id, movie,year) VALUES (2, "Flight", "2012");
+INSERT INTO Movies (actors_id, movie,year) VALUES (3, "John Wick", "2014");
+INSERT INTO Movies (actors_id, movie,year) VALUES (4, "Forrest Gump", "1994");
+INSERT INTO Movies (actors_id, movie,year) VALUES (5, "Ted", "2012");
+
+
+/*Return total net worth for each billionare*/
+SELECT actors.fullname,movies.movie,movies.year
+FROM Actors
+JOIN movies
+ON actors.id = movies.actors_id;
